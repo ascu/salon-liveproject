@@ -14,7 +14,6 @@ import java.util.Set;
 @ToString
 public class Slot {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,20 +22,14 @@ public class Slot {
     @JsonIgnore
     Set<SalonServiceDetail> availableServices;
 
-
     @ManyToOne
     private SalonServiceDetail selectedService;
 
     String stylistName;
-
-
     LocalDateTime slotFor;
-
     private SlotStatus status;
-
     LocalDateTime lockedAt;
     LocalDateTime confirmedAt;
-
 
 }
 
